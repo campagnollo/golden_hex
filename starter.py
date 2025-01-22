@@ -16,6 +16,10 @@ def home():
 def home2():
     return render_template('index2.html')
 
+@app.route('/story')
+def story():
+    return render_template('story.html')
+
 @app.route('/blog')
 def blog():
     return render_template('blog.html')

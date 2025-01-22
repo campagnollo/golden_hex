@@ -1,69 +1,112 @@
 {% extends "base.html" %}
-{% block title %}
-Home
-{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
 
 <main id="PAGES_CONTAINER" class="PAGES_CONTAINER" tabindex="-1" data-main-content="true">
-  <div id="SITE_PAGES" class="SITE_PAGES">
-    <div id="cee5" class="page-container">
-      <div class="page-content">
-        <div id="Containercee5" class="content-container">
-          <section id="about-section" class="section">
-            <div class="section-bg">
-              <h1 class="section-title">ABOUT</h1>
-            </div>
-          </section>
+  <section id="about-section" class="section">
+    <div class="section-bg">
+      <h1 class="section-title">ABOUT</h1>
+    </div>
+    <p class="about-text">
+      Golden Hex story started in California, where a family of beekeepers decided to share their love of raw honey with friends and family in Silicon Valley. Soon, the word about the quality of the honey spread, and requests poured in. This led to selling bee products to Bay Area and Los Angeles customers. Our company kept growing, producing the finest raw honey, pollen, propolis, candies made from beeswax, natural cosmetics, and soaps. Upon moving to North Carolina, we expanded our brand by opening a specialty store offering European and Mediterranean products. The Golden Hex store continues to offer raw honey and other natural products now produced in North Carolina. Conveniently located at 1200 NW Maynard Rd, Cary, NC, near downtown Cary and Thomas Bond Park.
+    </p>
+  </section>
 
-          <section id="story-section" class="section">
-            <div class="section-bg">
-              <p class="story-text">
-                Golden Hex story started in California, where a family of beekeepers decided to share their love of raw honey with friends and family in Silicon Valley.
-                Soon, the word about the quality of the honey spread, and requests poured in. This led to selling bee products to Bay Area and Los Angeles customers.
-                Our company kept growing, producing the finest raw honey, pollen, propolis, candies, natural cosmetics, and soaps.
-                Upon moving to North Carolina, we expanded our brand by opening a specialty store offering European and Mediterranean products.
-                The Golden Hex store continues to offer raw honey and other natural products now produced in North Carolina.
-                Conveniently located at 1200 NW Maynard Rd, Cary, NC, next to downtown Cary and Thomas Bond Park.
-              </p>
-              <h5 class="team-title">TEAM</h5>
-            </div>
-          </section>
+  <section id="team-section" class="section">
+    <h2 class="section-title">TEAM</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="{{ url_for('static', filename='Arthur_Shwarts.jpg') }}" alt="Arthur" />
+        <h6 class="team-name">Arthur Shwarts</h6>
+        <p class="team-role">Co-Owner</p>
+        <p class="team-bio">
+          Arthur has been living in the US since 1997. He is a North Carolina licensed Realtor, Software Programmer, gardener, fisherman, and father of two children.
+        </p>
+      </div>
 
-          <section id="team-section" class="section">
-            <div class="team-member">
-              <img src="https://static.wixstatic.com/media/a9db90_2eb71185201c4609a52906a39fd36d8f~mv2.jpg" alt="Arthur Shwarts" class="team-img">
-              <h6 class="team-name">Arthur Shwarts</h6>
-              <p class="team-role">Co-Owner</p>
-              <p class="team-bio">
-                Arthur has been living in the US since 1997. He is a North Carolina licensed Realtor, Software Programmer, gardener, fisherman, and father of two children.
-              </p>
-            </div>
+      <div class="team-member">
+        <img src="{{ url_for('static', filename='Erik_Shwarts.jpg') }}" alt="Erik" />
+        <h6 class="team-name">Erik Shwarts</h6>
+        <p class="team-role">Co-Owner</p>
+        <p class="team-bio">
+          Erik is a Mechanical Engineer. His favorite hobbies are fishing, fixing cars, traveling, and playing poker. Erik is a father of two children.
+        </p>
+      </div>
 
-            <div class="team-member">
-              <img src="https://static.wixstatic.com/media/a9db90_9a08f65d98ea43fea2ff8a47a6b1305f~mv2.jpg" alt="Erik Shwarts" class="team-img">
-              <h6 class="team-name">Erik Shwarts</h6>
-              <p class="team-role">Co-Owner</p>
-              <p class="team-bio">
-                Erik is a Mechanical Engineer. His favorite hobbies are fishing, fixing cars, traveling, and playing poker. Erik is a father of two children.
-              </p>
-            </div>
-
-            <div class="team-info">
-              <h6 class="team-title">Brothers</h6>
-              <p class="team-details">
-                <img src="{{ url_for('static', filename='brothers.jpg') }}"
-                                                         alt="Image of brothers"/>
-                Arthur and Erik are siblings born in beautiful Armenia. They spent happy summers in Ukraine and Russia, lived in Israel, and are now fulfilling their dream of being small business owners in the U.S.
-              </p>
-            </div>
-          </section>
-        </div>
+      <div class="team-member">
+        <img src="{{ url_for('static', filename='brothers.jpg') }}" alt="Brothers" />
+        <h6 class="team-name">Brothers</h6>
+        <p class="team-bio">
+          Arthur and Erik are siblings born in beautiful Armenia. They spent happy summers in Ukraine and Russia, lived in Israel, and are now fulfilling their dream of being small business owners in the U.S.
+        </p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <style>
+    .section {
+      margin: 20px 0;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .team-member {
+      text-align: center;
+      max-width: 250px;
+    }
+
+    .team-member img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .team-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .team-role {
+      font-size: 16px;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .team-bio {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    h1, h2 {
+  font-family: "Brush Script MT", cursive;
+}
+
+  </style>
 </main>
 
-
 {% endblock %}
-```

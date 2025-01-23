@@ -5,9 +5,6 @@ Flask app for web services.
 
 from flask import Flask, render_template
 
-
-
-
 app = Flask(__name__)
 app.secret_key = "password"
 
@@ -22,6 +19,7 @@ def home():
     """
     return render_template('home.html')
 
+
 @app.route('/story')
 def story():
     """
@@ -31,6 +29,7 @@ def story():
         str: The rendered template for the story page.
     """
     return render_template('story.html')
+
 
 @app.route('/blog')
 def blog():
@@ -42,6 +41,7 @@ def blog():
     """
     return render_template('blog.html')
 
+
 @app.route('/forum')
 def forum():
     """
@@ -51,6 +51,7 @@ def forum():
         str: The rendered template for the forum page.
     """
     return render_template('forum.html')
+
 
 @app.route('/contact')
 def contact():
@@ -62,6 +63,15 @@ def contact():
     """
     return render_template('contact.html')
 
+@app.route('/media')
+def media():
+    """
+    Renders the home page.
+
+    Returns:
+        str: The rendered template for the home page.
+    """
+    return render_template('media.html')
 
 
 if __name__ == '__main__':

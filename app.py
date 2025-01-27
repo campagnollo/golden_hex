@@ -73,7 +73,17 @@ def media():
     """
     return render_template('media.html')
 
+@app.route('/videos')
+def videos():
+    """
+    Renders the home page.
+
+    Returns:
+        str: The rendered template for the home page.
+    """
+    return render_template('videos.html')
+
 
 if __name__ == '__main__':
     #app.run(debug=True)
-    app.run(debug='True')
+    app.run(debug='True', host='0.0.0.0', port=8080)

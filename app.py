@@ -83,6 +83,16 @@ def videos():
     """
     return render_template('videos.html')
 
+@app.route('/products')
+def products():
+    """
+    Renders the product page.
+
+    Returns:
+        str: The rendered template for the product page.
+    """
+    return render_template('products.html')
+
 
 if __name__ == '__main__':
     #app.run(debug=True)

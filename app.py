@@ -93,6 +93,16 @@ def products():
     """
     return render_template('products.html')
 
+@app.route('/exciting-news-we-moved-expanded')
+def moved():
+    """
+    Renders the exciting news page.
+
+    Returns:
+        str: The rendered template for the exciting news page.
+    """
+    return render_template('exciting-news-we-moved-expanded.html')
+
 
 if __name__ == '__main__':
     #app.run(debug=True)

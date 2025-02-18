@@ -103,6 +103,15 @@ def moved():
     """
     return render_template('exciting-news-we-moved-expanded.html')
 
+@app.route('/new_year_favorite_menu')
+def new_year_favorite_menu():
+    """
+    Renders the new year favorite menu page.
+
+    Returns:
+        str: The rendered template for the new year favorite menu page.
+    """
+    return render_template('new_year_favorite_menu.html')
 
 if __name__ == '__main__':
     #app.run(debug=True)

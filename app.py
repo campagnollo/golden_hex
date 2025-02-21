@@ -113,6 +113,28 @@ def new_year_favorite_menu():
     """
     return render_template('new_year_favorite_menu.html')
 
+@app.route('/we_are_one_week_old')
+def we_are_one_week_old():
+    """
+    Renders the we are one week old page.
+
+    Returns:
+        str: The rendered template for the we are one week old page.
+    """
+    return render_template('we_are_one_week_old.html')
+
+@app.route('/first_day')
+def first_day():
+    """
+    Renders the first day page.
+
+    Returns:
+        str: The rendered template for the first day page.
+    """
+    return render_template('first_day.html')
+
+
+
 if __name__ == '__main__':
     #app.run(debug=True)
     app.run(debug='True', host='0.0.0.0', port=8080)

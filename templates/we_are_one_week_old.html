@@ -3,10 +3,53 @@
 
 {% block content %}
 
-<main id="PAGES_CONTAINER" class="PAGES_CONTAINER" tabindex="-1" data-main-content="true">
+<main>
+    <h1>We are one week old!!!</h1>
+    <div class="container">
+        <div> Today is a week since Golden Hex was reborn. March 8th. International Women's Day.
+            Since March 1st first day of opening, life at our store was booming. Many friends came by.
+            Many customers were excited to find their favorite products. Interesting people shared their personal
+            stories. We loved it!It was a very delightful, busy and fun beginning of the week. Until the days when
+            shelves with some products were ... completely empty. We warned our customers ahead of time
+            so they won’t drive a distance
+        </div>
+        <picture>
+            <img src="static/blog/lovely_lady.webp" alt="Lovely lady"/>
+        </picture>
+        <div> Arthur & Erik, store owners, came up with the idea to surprise ladies with the flowers - as its
+            a March 8th, International Women's Day, They pleasantly surprised our customers!
+        </div>
+        <picture>
+            <img src="static/one_week/lovely_lady2.png" alt="lovely_lady2"/>
+        </picture>
+        <div> We also started a new program: <b>SURPRISE ME.</b> So if you have someone whom you would like to
+            pleasantly
+            surprise, you can purchase from Golden Hex a box of chocolate (or other products of your choice) and
+            tell us how to contact that person (recipient). One of us at Golden Hex will get in touch with your
+            recipient informing them that something special is waiting their pick up in the Golden Hex store.
+            Small greeting card will be added to the gift with your desired message. There is no extra charge here
+            - you can pay via papal or stop in the store to purchase your gift ahead of time. We will inform you when
+            gift is picked up and probably make a picture, if one of us is available.
+            To order a <b>SURPRISE ME</b> gift please contact Lilia (at) goldenhex (dot) com.
+        </div>
+        <picture>
+            <img src="static/one_week/couple.png" alt="couple"/>
+        </picture>
+        <div>
+            Today we had our first happy recipients for "SURPRISE ME" gifts. Alina Karpenko and Victoria Sushik received
+            a lovely surprise gift from Tatyana. Happy March 8th, Alina, Victoria and Tatiana!<br><br>
+            Thank you everyone who came over during this week! It was a pleasure seeing you all!<br><br>
+            - Lilia aka Devishnik -
+        </div>
+        <picture>
+            <img src="static/one_week/zhensheni.png" alt="zhensheni"/>
+        </picture>
+
+    </div>
 
 
-  <style>
+</main>
+<style>
     .section {
       margin: 20px 0;
       padding: 20px;
@@ -25,50 +68,37 @@
       margin: 0 auto;
       max-width: 800px;
     }
-
-    .team-container {
+    .container {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 20px 0;
+      flex-direction: column; /* Default */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      gap: 10px;
     }
 
-    .team-member {
-      text-align: center;
-      max-width: 250px;
+    .container img{
+      width: 740px; /* Set width of all images */
+      height: 700px; /* Set height of all images */
+      object-fit: cover; /* Optional: ensures the image covers the defined size without distortion */
+}
+
+    .item {
+      width: 300px;
+      height: 80px;
+
     }
 
-    .team-member img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    .team-name {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 5px 0;
-    }
-
-    .team-role {
-      font-size: 16px;
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
-    .team-bio {
-      font-size: 14px;
-      line-height: 1.5;
-    }
 
     h1, h2 {
   font-family: "Brush Script MT", cursive;
+  text-align: center; /* Center vertically */
+  font-size: 60px;
 }
 
-  </style>
-</main>
+
+
+
+
+</style>
 
 {% endblock %}

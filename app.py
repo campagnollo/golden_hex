@@ -19,6 +19,16 @@ def home():
     """
     return render_template('home.html')
 
+@app.route('/dom')
+def home_p():
+    """
+    Renders the home page.
+
+    Returns:
+        str: The rendered template for the home page.
+    """
+    return render_template('home_p.html')
+
 
 @app.route('/story')
 def story():

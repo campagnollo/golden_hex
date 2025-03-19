@@ -30,6 +30,7 @@ playwright = sync_playwright().start()
 browser = playwright.chromium.launch(headless=False)
 page = browser.new_page(java_script_enabled=True)
 
+
 # Go to the URL and wait for the page to load
 page.goto(URL, wait_until="domcontentloaded")
 
@@ -51,16 +52,20 @@ DROPDOWN_TOGGLE.click(force=True)
 DROPDOWN_MENU_XPATH = XPATH_PREFIX + "//div[contains(@class, 'dropdown-menu')]"
 page.wait_for_selector(DROPDOWN_MENU_XPATH, state="visible", timeout=5000)
 
-# XPath for the Media link
-MEDIA_XPATH = XPATH_PREFIX + "//a[contains(@class, 'dropdown-item') and contains(@href, '/story')]"
-media_link = page.locator(MEDIA_XPATH)
+try:
+    # XPath for the Media link
+    MEDIA_XPATH = XPATH_PREFIX + "//a[contains(@class, 'dropdown-item') and" \
+                                 " contains(@href, '/story')]"
+    media_link = page.locator(MEDIA_XPATH)
 
-# Wait for the Media link to be visible and clickable
-media_link.wait_for(state="visible", timeout=5000)
-media_link.click()
-
-print("Clicked on Media link!")
-time.sleep(5)
+    # Wait for the Media link to be visible and clickable
+    media_link.wait_for(state="visible", timeout=5000)
+    media_link.click()
+except Exception as e:
+    print(f"Error clicking on Media link: {e}")
+else:
+    print("Clicked on Media link!")
+    time.sleep(5)
 
 # Debugging Pause (Uncomment if needed)
 # page.pause()
